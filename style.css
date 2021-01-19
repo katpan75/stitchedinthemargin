@@ -1,0 +1,102 @@
+.container {
+    display:grid;
+    width:100vw;
+    height:100vh;
+    border:2px blue solid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+
+.text{
+    visibility: hidden;
+    font-family: brandon-grotesque, sans-serif;
+    transition-property: visibility;
+    transition-duration: 200ms;
+}
+
+h3{
+    text-align:right;
+}
+
+.element{
+    padding:20px;
+    opacity:50%;
+    overflow:scroll;
+    transition-property: opacity;
+    transition-duration: 500ms;
+}
+
+.indented{
+    margin:10%;
+}
+
+.element.margins{
+    grid-area: 1 / 1 / span 2 / span 1;
+    background-color:#7B748E;
+
+}
+.element.margins .text{
+    color:#B5B0BF;
+}
+
+.element.story{
+    grid-area: 1 / 2 / span 1 / span 1;
+    background-color:#F3A38E;
+}
+.element.story .text{
+    color:#FDF0ED;
+}
+
+.element.selvage{
+    grid-area: 1 / 3 / span 2 / span 1;
+    background-color:#88B7B5;
+}
+.element.selvage .text{
+    color:#D9E8E7;
+}
+
+.element.body{
+    grid-area: 2 / 2 / span 2 / span 1;
+    background-color:#A7CAB1;
+}
+.element.body .text{
+    color:#F2F7F4;
+}
+
+.element.becoming{
+    grid-area: 3 / 1 / span 2 / span 1;
+    background-color:#F4C8B2;
+}
+.element.becoming .text{
+    color:#FCF2ED;
+}
+
+.element.territory{
+    grid-area: 4 / 2 / span 1 / span 1;
+    background-color:#85899E;
+}
+.element.territory .text{
+    color:#D2D3DB;
+}
+
+.element.fraying{
+    grid-area: 3 / 3 / span 2 / span 1;
+    background-color:#F6B35E;
+}
+.element.fraying .text{
+    color:#FCE4C5;
+}
+
+.element.margins:hover,.element.story:hover,.element.selvage:hover,
+.element.becoming:hover,.element.body:hover,.element.fraying:hover,
+.element.territory:hover{
+    opacity:100%;
+}
+
+.element.margins:hover .text, .element.story:hover .text,
+  .element.selvage:hover .text, .element.becoming:hover .text,
+  .element.body:hover .text, .element.fraying:hover .text,
+  .element.territory:hover .text{
+    visibility:visible;
+}
